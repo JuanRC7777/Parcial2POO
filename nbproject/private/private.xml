@@ -3,9 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/mMJua/Documents/NetBeansProjects/CTRL__SALUD/src/GUI/login.java</file>
-            <file>file:/C:/Users/mMJua/Documents/NetBeansProjects/CTRL__SALUD/src/GUI/Menu.java</file>
-            <file>file:/C:/Users/mMJua/Documents/NetBeansProjects/CTRL__SALUD/src/ctrl__salud/CTRL__SALUD.java</file>
+            <file>file:/C:/Users/mMJua/Desktop/Parcial2POO/src/ctrl__salud/Medico.java</file>
+            <file>file:/C:/Users/mMJua/Desktop/Parcial2POO/src/ctrl__salud/OperacionesMedico.java</file>
+            <file>file:/C:/Users/mMJua/Desktop/Parcial2POO/src/ctrl__salud/OperacionesEspecialidad.java</file>
+            <file>file:/C:/Users/mMJua/Desktop/Parcial2POO/src/GUI/Menu.java</file>
+            <file>file:/C:/Users/mMJua/Desktop/Parcial2POO/src/ctrl__salud/OperacionesPaciente.java</file>
+            <file>file:/C:/Users/mMJua/Desktop/Parcial2POO/src/ctrl__salud/Especialidad.java</file>
         </group>
     </open-files>
 </project-private>

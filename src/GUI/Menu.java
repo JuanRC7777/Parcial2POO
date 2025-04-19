@@ -1,5 +1,8 @@
 package GUI;
 import java.awt.CardLayout;
+import ctrl__salud.*;
+import javax.swing.JInternalFrame;
+import javax.swing.JOptionPane;
 /**
  *
  * @author mMJua
@@ -29,11 +32,41 @@ public class Menu extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        paciente = new javax.swing.JPanel();
         medico = new javax.swing.JPanel();
+        IDmedico = new javax.swing.JTextField();
+        Nombrem = new javax.swing.JTextField();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        ComboEspecialidad = new javax.swing.JComboBox<>();
+        jButton10 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        Especialidadtext = new javax.swing.JTextField();
+        jButton13 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jButton14 = new javax.swing.JButton();
         historiaclinica = new javax.swing.JPanel();
         cita = new javax.swing.JPanel();
+        ordenmedica = new javax.swing.JPanel();
+        paciente = new javax.swing.JPanel();
+        IDpaciente = new javax.swing.JTextField();
+        Nombrep = new javax.swing.JTextField();
+        Edadp = new javax.swing.JTextField();
+        Direccionp = new javax.swing.JTextField();
+        Telefonop = new javax.swing.JTextField();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jButton12 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -107,42 +140,63 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
+        jButton11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ordenmedica72.png"))); // NOI18N
+        jButton11.setText("Orden Medica");
+        jButton11.setContentAreaFilled(false);
+        jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton11.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ordenmedica72.png"))); // NOI18N
+        jButton11.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ordenmedica96.png"))); // NOI18N
+        jButton11.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton11.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton1)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(65, 65, 65)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(jButton2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 54, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(48, 48, 48))
+                        .addGap(44, 44, 44)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jButton1))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jButton2)
+                                            .addGap(4, 4, 4)))
+                                    .addGap(5, 5, 5)))
+                            .addComponent(jLabel1)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jButton3)
-                .addGap(177, 177, 177))
+                .addGap(18, 18, 18)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         jSplitPane2.setLeftComponent(jPanel1);
@@ -150,32 +204,139 @@ public class Menu extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 102));
         jPanel2.setLayout(new java.awt.CardLayout());
 
-        paciente.setBackground(new java.awt.Color(51, 255, 204));
+        medico.setBackground(new java.awt.Color(204, 204, 255));
 
-        javax.swing.GroupLayout pacienteLayout = new javax.swing.GroupLayout(paciente);
-        paciente.setLayout(pacienteLayout);
-        pacienteLayout.setHorizontalGroup(
-            pacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 495, Short.MAX_VALUE)
-        );
-        pacienteLayout.setVerticalGroup(
-            pacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 699, Short.MAX_VALUE)
-        );
+        Nombrem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombremActionPerformed(evt);
+            }
+        });
 
-        jPanel2.add(paciente, "paciente");
+        jButton8.setText("Guardar");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
-        medico.setBackground(new java.awt.Color(0, 51, 51));
+        jButton9.setText("Buscar");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        ComboEspecialidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboEspecialidadActionPerformed(evt);
+            }
+        });
+
+        jButton10.setText("Modificar");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jLabel7.setText("Identificacion");
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jLabel8.setText("Nombre");
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jLabel9.setText("Seleccionar Especialidad");
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jLabel10.setText("Añadir Especialidad");
+
+        Especialidadtext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EspecialidadtextActionPerformed(evt);
+            }
+        });
+
+        jButton13.setText("Añadir");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel11.setText("Añadir Especialidad");
+
+        jButton14.setText("Limpiar");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout medicoLayout = new javax.swing.GroupLayout(medico);
         medico.setLayout(medicoLayout);
         medicoLayout.setHorizontalGroup(
             medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 495, Short.MAX_VALUE)
+            .addGroup(medicoLayout.createSequentialGroup()
+                .addGap(206, 206, 206)
+                .addComponent(jLabel11)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(medicoLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(medicoLayout.createSequentialGroup()
+                        .addComponent(Especialidadtext)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton13)
+                        .addGap(1, 1, 1))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, medicoLayout.createSequentialGroup()
+                        .addGroup(medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(ComboEspecialidad, javax.swing.GroupLayout.Alignment.LEADING, 0, 167, Short.MAX_VALUE)
+                            .addComponent(Nombrem, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(IDmedico))
+                        .addGap(18, 18, 18)
+                        .addGroup(medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(73, 73, 73))
         );
         medicoLayout.setVerticalGroup(
             medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 699, Short.MAX_VALUE)
+            .addGroup(medicoLayout.createSequentialGroup()
+                .addGap(120, 120, 120)
+                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(IDmedico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(42, 42, 42)
+                .addGroup(medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Nombrem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8)
+                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addGroup(medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ComboEspecialidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9)
+                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addGroup(medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(Especialidadtext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
 
         jPanel2.add(medico, "medico");
@@ -186,7 +347,7 @@ public class Menu extends javax.swing.JFrame {
         historiaclinica.setLayout(historiaclinicaLayout);
         historiaclinicaLayout.setHorizontalGroup(
             historiaclinicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 495, Short.MAX_VALUE)
+            .addGap(0, 545, Short.MAX_VALUE)
         );
         historiaclinicaLayout.setVerticalGroup(
             historiaclinicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,7 +362,7 @@ public class Menu extends javax.swing.JFrame {
         cita.setLayout(citaLayout);
         citaLayout.setHorizontalGroup(
             citaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 495, Short.MAX_VALUE)
+            .addGap(0, 545, Short.MAX_VALUE)
         );
         citaLayout.setVerticalGroup(
             citaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -209,6 +370,129 @@ public class Menu extends javax.swing.JFrame {
         );
 
         jPanel2.add(cita, "cita");
+
+        javax.swing.GroupLayout ordenmedicaLayout = new javax.swing.GroupLayout(ordenmedica);
+        ordenmedica.setLayout(ordenmedicaLayout);
+        ordenmedicaLayout.setHorizontalGroup(
+            ordenmedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 545, Short.MAX_VALUE)
+        );
+        ordenmedicaLayout.setVerticalGroup(
+            ordenmedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 699, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(ordenmedica, "ordenmedica");
+
+        paciente.setBackground(new java.awt.Color(204, 204, 204));
+
+        IDpaciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IDpacienteActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("Guardar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("Buscar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jButton7.setText("Modificar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jLabel2.setText("ID_Paciente");
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jLabel3.setText("Nombre");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jLabel4.setText("Edad");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jLabel5.setText("Direccion");
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jLabel6.setText("Telefono");
+
+        jButton12.setText("Limpiar");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pacienteLayout = new javax.swing.GroupLayout(paciente);
+        paciente.setLayout(pacienteLayout);
+        pacienteLayout.setHorizontalGroup(
+            pacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pacienteLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(pacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
+                .addGap(35, 35, 35)
+                .addGroup(pacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Direccionp, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                    .addComponent(Telefonop, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Edadp)
+                    .addComponent(IDpaciente, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Nombrep, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGap(74, 74, 74)
+                .addGroup(pacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(40, 40, 40))
+        );
+        pacienteLayout.setVerticalGroup(
+            pacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pacienteLayout.createSequentialGroup()
+                .addGap(143, 143, 143)
+                .addGroup(pacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(IDpaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5)
+                    .addComponent(jLabel2))
+                .addGap(31, 31, 31)
+                .addGroup(pacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Nombrep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton6)
+                    .addComponent(jLabel3))
+                .addGap(42, 42, 42)
+                .addGroup(pacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Edadp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton7)
+                    .addComponent(jLabel4))
+                .addGap(42, 42, 42)
+                .addGroup(pacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Direccionp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(jButton12))
+                .addGap(39, 39, 39)
+                .addGroup(pacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Telefonop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addContainerGap(288, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(paciente, "paciente");
 
         jSplitPane2.setRightComponent(jPanel2);
 
@@ -244,6 +528,211 @@ public class Menu extends javax.swing.JFrame {
         cardLayout.show(jPanel2, "historiaclinica");
 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void IDpacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDpacienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IDpacienteActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        int cedula = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cédula del paciente"));
+        System.out.println("Cédula ingresada: "+ cedula);
+        if (cedula > 0) {
+            Paciente c2 = OperacionesPaciente.buscar(cedula); // ya da el paciente de forma directa
+            if (c2 != null) {
+                this.IDpaciente.setText(String.valueOf(c2.getIdPaciente()));
+                this.Nombrep.setText(c2.getNombrePaciente());
+                this.Edadp.setText(String.valueOf(c2.getEdad()));
+                this.Direccionp.setText(c2.getDireccion());
+                this.Telefonop.setText(String.valueOf(c2.getTelefono()));
+                System.out.println("Paciente encontrado");
+            } 
+            else {
+                JOptionPane.showMessageDialog(null, "No se ha encontrado el paciente");
+                System.out.println("Paciente no encontrado");
+            }
+}
+
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void ComboEspecialidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboEspecialidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboEspecialidadActionPerformed
+
+    private void NombremActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombremActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombremActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        cardLayout.show(jPanel2, "ordenmedica");
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        String textoID = this.IDpaciente.getText();
+        String name = this.Nombrep.getText();
+        String textoAge = this.Edadp.getText();
+        String direction = this.Direccionp.getText();
+        String textoPhone = this.Telefonop.getText();
+
+        // validar que no estén vacios
+        // esta parte del codigo es reutilizable pero me da pereza crear una funcion xd
+        if (textoID.isEmpty() || name.isEmpty() || textoAge.isEmpty() || direction.isEmpty() || textoPhone.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Debes ingresar todos los espacios correctamente");
+        } 
+        else {
+            try {
+                int ID = Integer.parseInt(textoID);
+                int age = Integer.parseInt(textoAge);
+                int phonenumber = Integer.parseInt(textoPhone);
+            
+                Paciente Gc = new Paciente(name, age, direction, phonenumber);
+                Gc.setIdPaciente(ID);
+                OperacionesPaciente.Guardad(Gc);
+
+                System.out.println(Gc.getIdPaciente());
+                System.out.println(Gc.getNombrePaciente());
+                System.out.println(Gc.getEdad());
+                System.out.println(Gc.getDireccion());
+                System.out.println(Gc.getTelefono());
+                JOptionPane.showMessageDialog(null, "Usuario agregado");
+            } 
+            catch (NumberFormatException e) {
+            // aqui esta la excepcion por si ingresa numeros en un campo de enteros
+            JOptionPane.showMessageDialog(null, "Los campos numéricos deben ser números válidos");
+            }
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        //limpiando las entradas
+        this.IDpaciente.setText("");
+        this.Nombrep.setText("");
+        this.Edadp.setText("");
+        this.Direccionp.setText("");
+        this.Telefonop.setText("");
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        //modificar los valores de un paciente seleccionado
+        //se hacen las validaciones correspondientes
+        JOptionPane.showMessageDialog(null, "Recuerda que la cedula nunca debe Cambiar");
+        String textoID = this.IDpaciente.getText();
+        String name = this.Nombrep.getText();
+        String textoAge = this.Edadp.getText();
+        String direction = this.Direccionp.getText();
+        String textoPhone = this.Telefonop.getText();
+
+        // Validar que no esten vacios
+        // esta parte del codigo es reutilizable pero me da pereza crear una funcion xd
+        if (textoID.isEmpty() || name.isEmpty() || textoAge.isEmpty() || direction.isEmpty() || textoPhone.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Debes ingresar todos los espacios correctamente");
+        } 
+        else {
+            try {
+                int ID = Integer.parseInt(textoID);
+                int age = Integer.parseInt(textoAge);
+                int phonenumber = Integer.parseInt(textoPhone);
+            
+                OperacionesPaciente.modificar( ID, name, age, direction, phonenumber);
+                JOptionPane.showMessageDialog(null, "Datos modificados");
+            } 
+            catch (NumberFormatException e) {
+            // aqui esta la excepcion por si ingresa numeros en un campo de enteros
+            JOptionPane.showMessageDialog(null, "Los campos numéricos deben ser números válidos");
+            }
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void EspecialidadtextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EspecialidadtextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EspecialidadtextActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        String especialidad = Especialidadtext.getText();
+        if (!especialidad.isEmpty()){
+            ComboEspecialidad.addItem(especialidad); // Aqui se usa el nombre del combo
+            Especialidad esp = new Especialidad(especialidad);
+            OperacionesEspecialidad.Guardar(esp);
+            System.out.println("Llego: " + esp.getEspacialidad());
+            Especialidadtext.setText("");
+        }
+        else{
+            JOptionPane.showMessageDialog(null," Debes ingresar un dato valido");
+        }
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        String texIDmedico = this.IDmedico.getText();
+        String textNamemedico = this.Nombrem.getText();
+        int opcionEspecialidad = this.ComboEspecialidad.getSelectedIndex();
+        // hacemos el validador
+        if(texIDmedico.isEmpty() || textNamemedico.isEmpty()){
+            JOptionPane.showMessageDialog(null," Debes Ingresar bien los datos");
+        }
+        else{
+            
+            try{
+                //convritiendo el string en int con respecto la cedula del medico
+                int Cedulam = Integer.parseInt(texIDmedico);
+                Medico md = new Medico(textNamemedico, opcionEspecialidad);
+                md.setIdMedico(Cedulam);
+                OperacionesMedico.Guardar(md);
+                JOptionPane.showMessageDialog(null," Medico agregado con exito");
+            }
+            catch(NumberFormatException e){
+                JOptionPane.showMessageDialog(null," Debes respetar el tipo de valores correctos");
+            }
+        }
+        
+        System.out.println(texIDmedico);
+        System.out.println(texIDmedico);
+        System.out.println(opcionEspecialidad);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        int cedulamed = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el numero de cedula para buscar"));
+        if (cedulamed > 0){
+            Medico md = OperacionesMedico.buscar(cedulamed);
+            if(md != null){
+                this.IDmedico.setText(String.valueOf(md.getIdMedico()));
+                System.out.println(md.getMedico());
+                this.Nombrem.setText(md.getMedico());
+                ComboEspecialidad.setSelectedIndex(md.getIdEspecialidad());
+            }
+        }
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        //Se modifica el medico
+        JOptionPane.showMessageDialog(null, "Recuerda que la cedula nunca debe cambiar");
+        String texIDmedico = this.IDmedico.getText();
+        String textNamemedico = this.Nombrem.getText();
+        int opcionEspecialidad = this.ComboEspecialidad.getSelectedIndex();
+        // hacemos el validador
+        if(texIDmedico.isEmpty() || textNamemedico.isEmpty()){
+            JOptionPane.showMessageDialog(null," Debes Ingresar bien los datos");
+        }
+        else{
+            
+            try{
+                //convritiendo el string en int con respecto la cedula del medico
+                int Cedulam = Integer.parseInt(texIDmedico);
+                
+                OperacionesMedico.modificar(Cedulam, textNamemedico, opcionEspecialidad);
+                JOptionPane.showMessageDialog(null," Cambios agregados con exito");
+            }
+            catch(NumberFormatException e){
+                JOptionPane.showMessageDialog(null," Debes respetar el tipo de valores correctos");
+            }
+        }
+        
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // apartado para limpiar los espacios menos el combox
+        this.IDmedico.setText("");
+        this.Nombrem.setText("");
+        this.Especialidadtext.setText("");
+    }//GEN-LAST:event_jButton14ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -281,17 +770,47 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> ComboEspecialidad;
+    private javax.swing.JTextField Direccionp;
+    private javax.swing.JTextField Edadp;
+    private javax.swing.JTextField Especialidadtext;
+    private javax.swing.JTextField IDmedico;
+    private javax.swing.JTextField IDpaciente;
+    private javax.swing.JTextField Nombrem;
+    private javax.swing.JTextField Nombrep;
+    private javax.swing.JTextField Telefonop;
     private javax.swing.JPanel cita;
     private javax.swing.JPanel historiaclinica;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSplitPane jSplitPane2;
     private javax.swing.JPanel medico;
+    private javax.swing.JPanel ordenmedica;
     private javax.swing.JPanel paciente;
     // End of variables declaration//GEN-END:variables
 }
